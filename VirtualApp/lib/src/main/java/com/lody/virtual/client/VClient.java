@@ -543,8 +543,8 @@ public final class VClient extends IVClient.Stub {
                 CompatibilityInfoHolder.set.call(LoadedApkICS.mCompatibilityInfo.get(mBoundApplication.info), compatInfo);
             }
         }
-		//ssl适配
-		if (NetworkSecurityConfigProvider.install != null) {
+        //ssl适配
+        if (NetworkSecurityConfigProvider.install != null) {
             Security.removeProvider("AndroidNSSP");
             NetworkSecurityConfigProvider.install.call(context);
         }
